@@ -12,5 +12,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  base: 'https://amxxmodularecosystem.github.io/vue-cwapi-weapons-migrator/',
 })
