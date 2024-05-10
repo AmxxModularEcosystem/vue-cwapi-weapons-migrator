@@ -1,12 +1,44 @@
 import './assets/main.css'
 
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
-import { createVuestic } from "vuestic-ui";
-import "vuestic-ui/css";
+import {
+    createVuesticEssential,
+    VaLayout,
+    VaNavbar,
+    VaNavbarItem,
+    VaAlert,
+    VaCard,
+    VaCardTitle,
+    VaCardContent,
+    VaFileUpload,
+    VaCardActions,
+    VaButton,
+    VaDivider,
+    VaList,
+    VaListItem,
+    VaListItemSection,
+} from "vuestic-ui";
+import "vuestic-ui/styles/essential.css";
 
 const app = createApp(App)
-app.use(createVuestic({
+app.use(createVuesticEssential({
+    components: {
+        VaLayout,
+        VaNavbar,
+        VaNavbarItem,
+        VaAlert,
+        VaCard,
+        VaCardTitle,
+        VaCardContent,
+        VaFileUpload,
+        VaCardActions,
+        VaButton,
+        VaDivider,
+        VaList,
+        VaListItem,
+        VaListItemSection,
+    },
     config: {
         colors: {
             currentPresetName: 'dark',
