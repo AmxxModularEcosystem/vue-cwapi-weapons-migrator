@@ -83,7 +83,7 @@ async function onMigrate() {
     }
 
     if (Object.hasOwn(weapon, 'Sounds')) {
-      if (Object.hasOwn(weapon['Sounds'], 'v')) {
+      if (Object.hasOwn(weapon['Sounds'], 'ShotSilent')) {
         weapon['Sounds']['ShotSilenced'] = weapon['Sounds']['ShotSilent'];
         delete weapon['Sounds']['ShotSilent'];
       }
