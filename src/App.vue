@@ -137,9 +137,6 @@ function download(filename, text) {
 
     <template #content>
       <div class="m-auto container pt-4">
-        <VaAlert>
-          Конвертация конфигов оружия CWAPI от старой версии (0.7.x) в формат, поддерживаемый новой версией (0.8.0).
-        </VaAlert>
         <VaAlert color="warning">
           Все способности для старой версии не совместимы с новой и будут удалены из файла.
         </VaAlert>
@@ -150,7 +147,7 @@ function download(filename, text) {
 
         <div class="lg:w-1/2 m-auto mt-2">
           <VaCard>
-            <VaCardTitle>Загрузка файлов</VaCardTitle>
+            <VaCardTitle>Загрузка файлов (от версии 0.7.x)</VaCardTitle>
             <VaCardContent>
               <VaFileUpload
                   file-types="json"
@@ -169,7 +166,7 @@ function download(filename, text) {
           <VaDivider class="pt-3 pb-2 px-8"/>
 
           <VaCard>
-            <VaCardTitle>Готовые файлы</VaCardTitle>
+            <VaCardTitle>Готовые файлы (для версии 0.8.0)</VaCardTitle>
             <VaCardContent>
               <VaList class="space-y-2">
                 <VaListItem v-for="file in readyFiles" :key="file.filename">
