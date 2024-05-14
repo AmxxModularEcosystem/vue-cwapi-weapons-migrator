@@ -43,7 +43,6 @@ async function onMigrate() {
     delete weapon['DefaultName'];
 
     const removeFields = [
-      'Sounds',
       'MaxWalkSpeed',
       'Damage',
       'Accuracy',
@@ -80,6 +79,13 @@ async function onMigrate() {
       if (Object.hasOwn(weapon['Models'], 'w')) {
         weapon['Models']['World'] = weapon['Models']['w'];
         delete weapon['Models']['w'];
+      }
+    }
+
+    if (Object.hasOwn(weapon, 'Sounds')) {
+      if (Object.hasOwn(weapon['Sounds'], 'v')) {
+        weapon['Sounds']['ShotSilenced'] = weapon['Sounds']['ShotSilent'];
+        delete weapon['Sounds']['ShotSilent'];
       }
     }
 
