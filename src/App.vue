@@ -166,7 +166,7 @@ function download(filename, text) {
           <VaDivider class="pt-3 pb-2 px-8"/>
 
           <VaCard>
-            <VaCardTitle>Готовые файлы (для версии 0.8.0)</VaCardTitle>
+            <VaCardTitle>Готовые файлы (для версии 1.0.0)</VaCardTitle>
             <VaCardContent>
               <VaList class="space-y-2">
                 <VaListItem v-for="file in readyFiles" :key="file.filename">
